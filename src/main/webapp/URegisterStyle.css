@@ -1,0 +1,258 @@
+@charset "UTF-8";
+
+/* Register Page Styles */
+.register-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.register-left {
+    background: linear-gradient(135deg, #FF6B6B 0%, #E85A5A 100%);
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.register-left .logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.register-left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.register-left p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.side-image {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.register-right {
+    background-color: white;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.register-form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-form h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1A1A1A;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00D9A3;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Form Options */
+.form-options {
+    margin-bottom: 1.5rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox input {
+    cursor: pointer;
+    width: auto;
+}
+
+.checkbox span {
+    color: #666666;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: #00D9A3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #00B589;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #E5E5E5;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    background-color: white;
+    padding: 0 1rem;
+    color: #666666;
+    font-size: 0.875rem;
+}
+
+/* Social Login */
+.social-login {
+    margin-bottom: 1.5rem;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.btn-google:hover {
+    background-color: #F8F9FA;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-google span {
+    font-weight: bold;
+    color: #4285F4;
+}
+
+/* Sign In Link */
+.signin-link {
+    text-align: center;
+    color: #666666;
+}
+
+.signin-link a {
+    color: #00D9A3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .register-container {
+        grid-template-columns: 1fr;
+    }
+
+    .register-left {
+        padding: 2rem;
+        min-height: 300px;
+    }
+
+    .register-left h1 {
+        font-size: 2rem;
+    }
+
+    .side-image {
+        max-width: 250px;
+    }
+
+    .register-left .logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .register-right {
+        padding: 2rem 1.5rem;
+    }
+}

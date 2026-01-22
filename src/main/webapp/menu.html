@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - FlavorNest</title>
+    <link rel="stylesheet" href="menuStyle.css" />
+    <link rel="stylesheet" href="common.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">
+    <img src="assets/images/menu/flavour.png" alt="FlavorNest Logo">
+</span>
+
+          <span class="logo-text">FlavorNest</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="Restaurant.jsp">Restaurants</a></li>
+          <li><a href="offers.html">Offers</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="cart" class="cart-btn">
+            🛒 <span class="cart-count">0</span>
+          </a>
+          <a href="login.html" class="btn-primary">Sign In</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+      <div class="container">
+        <h1>Our Menu</h1>
+        <p>Explore our delicious food items</p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <div class="container">
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="veg">Veg</button>
+          <button class="filter-btn" data-category="non-veg">Non-Veg</button>
+          <button class="filter-btn" data-category="biryani">Biryani</button>
+          <button class="filter-btn" data-category="pizza">Pizza</button>
+          <button class="filter-btn" data-category="burger">Burger</button>
+          <button class="filter-btn" data-category="dosa">Dosa</button>
+        </div>
+        <div class="search-filter">
+          <input
+            type="text"
+            placeholder="Search menu items..."
+            id="menuSearch"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-items">
+      <div class="container">
+        <div class="menu-grid">
+          <!-- Burger Items -->
+          <div class="menu-card" data-category="burger veg">
+            <div class="menu-card-image">
+              <img src="assets/images/menu/veg_burger.jpg" alt="Veg Burger" />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Veg Burger</h3>
+              <p class="description">
+                Crispy veggie patty with fresh lettuce, tomato & special sauce
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹149</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(1, 'Veg Burger', 149)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pizza Items -->
+          <div class="menu-card" data-category="pizza veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/cheese_pizza.jpg"
+                alt="Cheese Pizza"
+              />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Cheese Pizza</h3>
+              <p class="description">
+                Loaded with mozzarella cheese & Italian herbs
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹299</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(2, 'Cheese Pizza', 299)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="pizza veg">
+            <div class="menu-card-image">
+              <img src="assets/images/menu/veg_pizza.jpg" alt="Veg Pizza" />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Veg Pizza</h3>
+              <p class="description">
+                Topped with capsicum, onion, tomato & olives
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹349</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(3, 'Veg Pizza', 349)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Biryani Items -->
+          <div class="menu-card" data-category="biryani non-veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/chicken_biryani.jpg"
+                alt="Chicken Biryani"
+              />
+              <span class="badge non-veg">NON-VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Chicken Biryani</h3>
+              <p class="description">
+                Aromatic basmati rice with tender chicken pieces
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹249</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(4, 'Chicken Biryani', 249)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dosa Items -->
+          <div class="menu-card" data-category="dosa veg">
+            <div class="menu-card-image">
+              <img src="assets/images/menu/masala_dosa.jpg" alt="Masala Dosa" />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Masala Dosa</h3>
+              <p class="description">
+                Crispy dosa filled with spiced potato masala
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹89</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(5, 'Masala Dosa', 89)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="dosa veg">
+            <div class="menu-card-image">
+              <img src="assets/images/menu/plain_dosa.jpg" alt="Plain Dosa" />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Plain Dosa</h3>
+              <p class="description">
+                Classic crispy dosa served with chutney & sambar
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹69</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(6, 'Plain Dosa', 69)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- More Items -->
+          <div class="menu-card" data-category="non-veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/butter_chicken.jpg"
+                alt="Butter Chicken"
+              />
+              <span class="badge non-veg">NON-VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Butter Chicken</h3>
+              <p class="description">
+                Creamy tomato-based curry with tender chicken
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹329</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(7, 'Butter Chicken', 329)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="north veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/shahi_paneer.jpg"
+                alt="Shahi Paneer"
+              />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Shahi Paneer</h3>
+              <p class="description">
+                Rich creamy gravy with soft paneer cubes
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹269</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(3, 'Shahi Paneer', 269)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="north veg">
+            <div class="menu-card-image">
+              <img src="assets/images/menu/dal_tadka.jpg" alt="Dal Tadka" />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Dal Tadka</h3>
+              <p class="description">Yellow dal tempered with desi spices</p>
+              <div class="menu-card-footer">
+                <span class="price">₹189</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(4, 'Dal Tadka', 189)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="north veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/chole_bhature.jpg"
+                alt="Chole Bhature"
+              />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Chole Bhature</h3>
+              <p class="description">
+                Spicy chickpeas served with fluffy bhature
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹219</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(5, 'Chole Bhature', 219)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="south veg">
+            <div class="menu-card-image">
+              <img src="assets/images/menu/idli_sambar.jpg" alt="Idli Sambar" />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Idli Sambar</h3>
+              <p class="description">
+                Soft idlis served with hot sambar & chutney
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹129</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(6, 'Idli Sambar', 129)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="south veg">
+            <div class="menu-card-image">
+              <img src="assets/images/menu/uttapam.jpg" alt="Uttapam" />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Uttapam</h3>
+              <p class="description">Thick dosa topped with onions & veggies</p>
+              <div class="menu-card-footer">
+                <span class="price">₹159</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(7, 'Uttapam', 159)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="chinese veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/veg_fried_rice.jpg"
+                alt="Veg Fried Rice"
+              />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Veg Fried Rice</h3>
+              <p class="description">Wok-tossed rice with fresh vegetables</p>
+              <div class="menu-card-footer">
+                <span class="price">₹199</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(8, 'Veg Fried Rice', 199)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="snacks veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/veg_sandwich.jpg"
+                alt="Veg Sandwich"
+              />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Veg Sandwich</h3>
+              <p class="description">
+                Fresh veggies layered with creamy spread
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹149</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(9, 'Veg Sandwich', 149)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="snacks veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/french_fries.jpg"
+                alt="French Fries"
+              />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>French Fries</h3>
+              <p class="description">Crispy golden fries with seasoning</p>
+              <div class="menu-card-footer">
+                <span class="price">₹119</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(10, 'French Fries', 119)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="nonveg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/chicken_momos.jpg"
+                alt="Chicken Momos"
+              />
+              <span class="badge non-veg">NON-VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Chicken Momos</h3>
+              <p class="description">Steamed momos filled with juicy chicken</p>
+              <div class="menu-card-footer">
+                <span class="price">₹189</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(11, 'Chicken Momos', 189)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="nonveg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/kadai_chicken.jpg"
+                alt="Kadai Chicken"
+              />
+              <span class="badge non-veg">NON-VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Kadai Chicken</h3>
+              <p class="description">
+                Spicy chicken cooked with capsicum & onions
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹289</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(12, 'Kadai Chicken', 289)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="nonveg snacks">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/chicken_roll.jpg"
+                alt="Chicken Roll"
+              />
+              <span class="badge non-veg">NON-VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Chicken Roll</h3>
+              <p class="description">Spicy chicken wrapped in soft roti</p>
+              <div class="menu-card-footer">
+                <span class="price">₹179</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(13, 'Chicken Roll', 179)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="veg">
+            <div class="menu-card-image">
+              <img
+                src="assets/images/menu/paneer_tikka.jpg"
+                alt="Paneer Tikka"
+              />
+              <span class="badge veg">VEG</span>
+            </div>
+            <div class="menu-card-content">
+              <h3>Paneer Tikka</h3>
+              <p class="description">
+                Grilled cottage cheese marinated in spices
+              </p>
+              <div class="menu-card-footer">
+                <span class="price">₹249</span>
+                <button
+                  class="btn-add-cart"
+                  onclick="addToCart(8, 'Paneer Tikka', 249)"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 FlavorNest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="menu.js"></script>
+  </body>
+</html>

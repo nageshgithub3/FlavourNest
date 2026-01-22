@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - FlavourNest</title>
+    <link rel="stylesheet" href="orderConfirmationStyle.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">
+    <img src="assets/images/menu/flavour.png" alt="FlavorNest Logo">
+</span>
+                <span class="logo-text">FlavourNest</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Confirmation Section -->
+    <section class="confirmation-section">
+        <div class="container">
+            <div class="confirmation-card">
+                <div class="success-icon">✓</div>
+                <h1>Order Placed Successfully!</h1>
+                <p class="confirmation-message">
+                    Thank you for your order. We've received your order and will start preparing it shortly.
+                </p>
+                
+                <div class="order-details">
+                    <div class="detail-item">
+                        <span class="label">Order ID:</span>
+                        <span class="value" id="orderId">#12345</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Estimated Delivery:</span>
+                        <span class="value">30-40 minutes</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Status:</span>
+                        <span class="value status-pending">Pending</span>
+                    </div>
+                </div>
+                
+                <div class="progress-tracker">
+                    <div class="progress-step active">
+                        <div class="step-icon">📝</div>
+                        <p>Order Placed</p>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-icon">👨‍🍳</div>
+                        <p>Preparing</p>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-icon">🚴</div>
+                        <p>On the Way</p>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">
+                        <div class="step-icon">✓</div>
+                        <p>Delivered</p>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="home.html" class="btn-primary">Continue Shopping</a>
+                    <a href="#" class="btn-secondary">Track Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FlavourNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get order ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('orderId');
+        if (orderId) {
+            document.getElementById('orderId').textContent = '#' + orderId;
+        }
+    </script>
+</body>
+</html>

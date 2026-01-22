@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Deals - FlavorNest</title>
+    <link rel="stylesheet" href="offersStyle.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">
+                    <img src="assets/images/menu/flavour.png" alt="FlavorNest Logo" />
+                </span>
+                <span class="logo-text">FlavorNest</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="Restaurant.jsp">Restaurants</a></li>
+                <li><a href="offers.html" class="active">Offers</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart" class="cart-btn">
+                    🛒 <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="btn-primary">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offers Header -->
+    <section class="offers-header">
+        <div class="container">
+            <h1>🎉 Exclusive Offers & Deals</h1>
+            <p>Save big on your favorite food with our amazing offers!</p>
+        </div>
+    </section>
+
+    <!-- Featured Deals -->
+    <section class="featured-deals">
+        <div class="container">
+            <h2 class="section-title">🔥 Hot Deals</h2>
+            <div class="deals-grid">
+                <!-- Deal 1 -->
+                <div class="deal-card featured">
+                    <div class="deal-badge">TRENDING</div>
+                    <div class="deal-icon">🎁</div>
+                    <h3>First Order Special</h3>
+                    <div class="discount">50% OFF</div>
+                    <p>Get 50% off on your first order. Maximum discount ₹150</p>
+                    <div class="deal-code">
+                        <span>Code:</span>
+                        <strong id="code-FIRST50">FIRST50</strong>
+                        <button class="btn-copy" onclick="copyCode('FIRST50')">Copy</button>
+                    </div>
+                    <div class="deal-validity">Valid till: Jan 31, 2026</div>
+                    <button class="btn-order-deal" onclick="applyOfferAndOrder('FIRST50')">Order Now</button>
+                </div>
+
+                <!-- Deal 2 -->
+                <div class="deal-card">
+                    <div class="deal-badge hot">HOT</div>
+                    <div class="deal-icon">🍕</div>
+                    <h3>Weekend Feast</h3>
+                    <div class="discount">40% OFF</div>
+                    <p>Order above ₹499 and get 40% off on weekends</p>
+                    <div class="deal-code">
+                        <span>Code:</span>
+                        <strong id="code-WEEKEND40">WEEKEND40</strong>
+                        <button class="btn-copy" onclick="copyCode('WEEKEND40')">Copy</button>
+                    </div>
+                    <div class="deal-validity">Valid: Sat & Sun only</div>
+                    <button class="btn-order-deal" onclick="applyOfferAndOrder('WEEKEND40')">Order Now</button>
+                </div>
+
+                <!-- Deal 3 -->
+                <div class="deal-card">
+                    <div class="deal-badge new">NEW</div>
+                    <div class="deal-icon">🍔</div>
+                    <h3>Burger Bonanza</h3>
+                    <div class="discount">Buy 1 Get 1</div>
+                    <p>Buy 1 burger and get 1 free on orders from Burger Haven</p>
+                    <div class="deal-code">
+                        <span>Code:</span>
+                        <strong id="code-BURGER1">BURGER1</strong>
+                        <button class="btn-copy" onclick="copyCode('BURGER1')">Copy</button>
+                    </div>
+                    <div class="deal-validity">Valid till: Jan 25, 2026</div>
+                    <button class="btn-order-deal" onclick="applyOfferAndOrder('BURGER1')">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bank Offers -->
+    <section class="bank-offers">
+        <div class="container">
+            <h2 class="section-title">💳 Bank & Payment Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-logo">💳</div>
+                    <h3>HDFC Credit Card</h3>
+                    <p class="offer-discount">20% OFF up to ₹100</p>
+                    <p class="offer-desc">On orders above ₹500 using HDFC Credit Cards</p>
+                    <div class="offer-code">Code: <strong>HDFC20</strong></div>
+                    <button class="btn-order-bank" onclick="applyOfferAndOrder('HDFC20')">Use Offer</button>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-logo">📱</div>
+                    <h3>Paytm Wallet</h3>
+                    <p class="offer-discount">₹75 Cashback</p>
+                    <p class="offer-desc">Pay via Paytm Wallet and get instant cashback</p>
+                    <div class="offer-code">Code: <strong>PAYTM75</strong></div>
+                    <button class="btn-order-bank" onclick="applyOfferAndOrder('PAYTM75')">Use Offer</button>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-logo">💰</div>
+                    <h3>PhonePe UPI</h3>
+                    <p class="offer-discount">10% Cashback</p>
+                    <p class="offer-desc">Up to ₹50 on UPI payments via PhonePe</p>
+                    <div class="offer-code">Code: <strong>PHONEPE10</strong></div>
+                    <button class="btn-order-bank" onclick="applyOfferAndOrder('PHONEPE10')">Use Offer</button>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-logo">🏦</div>
+                    <h3>ICICI Debit Card</h3>
+                    <p class="offer-discount">15% OFF</p>
+                    <p class="offer-desc">Maximum discount ₹75 on ICICI Debit Cards</p>
+                    <div class="offer-code">Code: <strong>ICICI15</strong></div>
+                    <button class="btn-order-bank" onclick="applyOfferAndOrder('ICICI15')">Use Offer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Specific Offers -->
+    <section class="restaurant-offers">
+        <div class="container">
+            <h2 class="section-title">🍽️ Restaurant Offers</h2>
+            <div class="restaurant-offers-grid">
+                <div class="restaurant-offer-card">
+                    <img src="assets/images/menu/butter_chicken.jpg" alt="Delhi Darbar">
+                    <div class="restaurant-offer-content">
+                        <h3>Delhi Darbar</h3>
+                        <div class="offer-tag">30% OFF</div>
+                        <p>On all North Indian dishes above ₹299</p>
+                        <div class="offer-meta">
+                            <span>⭐ 4.5</span>
+                            <span>• 30-35 min</span>
+                        </div>
+                        <button class="btn-order" onclick="orderFromRestaurant(1)">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="restaurant-offer-card">
+                    <img src="assets/images/menu/masala_dosa.jpg" alt="South Spice">
+                    <div class="restaurant-offer-content">
+                        <h3>South Spice</h3>
+                        <div class="offer-tag">25% OFF</div>
+                        <p>Free delivery on orders above ₹199</p>
+                        <div class="offer-meta">
+                            <span>⭐ 4.7</span>
+                            <span>• 25-30 min</span>
+                        </div>
+                        <button class="btn-order" onclick="orderFromRestaurant(2)">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="restaurant-offer-card">
+                    <img src="assets/images/menu/cheese_pizza.jpg" alt="Pizza Palace">
+                    <div class="restaurant-offer-content">
+                        <h3>Pizza Palace</h3>
+                        <div class="offer-tag">Buy 2 Get 1 Free</div>
+                        <p>On all medium and large pizzas</p>
+                        <div class="offer-meta">
+                            <span>⭐ 4.6</span>
+                            <span>• 30-40 min</span>
+                        </div>
+                        <button class="btn-order" onclick="orderFromRestaurant(4)">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="restaurant-offer-card">
+                    <img src="assets/images/menu/veg_burger.jpg" alt="Burger Haven">
+                    <div class="restaurant-offer-content">
+                        <h3>Burger Haven</h3>
+                        <div class="offer-tag">Combo @ ₹199</div>
+                        <p>Burger + Fries + Drink combo meal</p>
+                        <div class="offer-meta">
+                            <span>⭐ 4.3</span>
+                            <span>• 20-25 min</span>
+                        </div>
+                        <button class="btn-order" onclick="orderFromRestaurant(3)">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Codes -->
+    <section class="promo-codes">
+        <div class="container">
+            <h2 class="section-title">🎟️ More Promo Codes</h2>
+            <div class="promo-list">
+                <div class="promo-item">
+                    <div class="promo-left">
+                        <div class="promo-icon">🎊</div>
+                        <div class="promo-info">
+                            <h4>SAVE100</h4>
+                            <p>Save ₹100 on orders above ₹499</p>
+                        </div>
+                    </div>
+                    <button class="btn-apply" onclick="applyOfferAndOrder('SAVE100')">Apply</button>
+                </div>
+
+                <div class="promo-item">
+                    <div class="promo-left">
+                        <div class="promo-icon">🌟</div>
+                        <div class="promo-info">
+                            <h4>FREEDEL</h4>
+                            <p>Free delivery on all orders today</p>
+                        </div>
+                    </div>
+                    <button class="btn-apply" onclick="applyOfferAndOrder('FREEDEL')">Apply</button>
+                </div>
+
+                <div class="promo-item">
+                    <div class="promo-left">
+                        <div class="promo-icon">🎈</div>
+                        <div class="promo-info">
+                            <h4>FLAT150</h4>
+                            <p>Flat ₹150 off on orders above ₹799</p>
+                        </div>
+                    </div>
+                    <button class="btn-apply" onclick="applyOfferAndOrder('FLAT150')">Apply</button>
+                </div>
+
+                <div class="promo-item">
+                    <div class="promo-left">
+                        <div class="promo-icon">💝</div>
+                        <div class="promo-info">
+                            <h4>NEWUSER</h4>
+                            <p>40% off for new users, max ₹120</p>
+                        </div>
+                    </div>
+                    <button class="btn-apply" onclick="applyOfferAndOrder('NEWUSER')">Apply</button>
+                </div>
+
+                <div class="promo-item">
+                    <div class="promo-left">
+                        <div class="promo-icon">🎯</div>
+                        <div class="promo-info">
+                            <h4>LUNCH30</h4>
+                            <p>30% off on lunch orders (12 PM - 3 PM)</p>
+                        </div>
+                    </div>
+                    <button class="btn-apply" onclick="applyOfferAndOrder('LUNCH30')">Apply</button>
+                </div>
+
+                <div class="promo-item">
+                    <div class="promo-left">
+                        <div class="promo-icon">🌙</div>
+                        <div class="promo-info">
+                            <h4>NIGHT25</h4>
+                            <p>25% off on late night orders after 10 PM</p>
+                        </div>
+                    </div>
+                    <button class="btn-apply" onclick="applyOfferAndOrder('NIGHT25')">Apply</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FlavorNest</h3>
+                    <p>Your favorite food delivery service</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Safety</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FlavorNest. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Copy promo code function
+        function copyCode(code) {
+            navigator.clipboard.writeText(code).then(() => {
+                showToast(`✓ Code "${code}" copied!`);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                showToast('Failed to copy code');
+            });
+        }
+
+        // Apply offer and redirect to menu/cart
+        function applyOfferAndOrder(promoCode) {
+            // Store promo code in session storage
+            sessionStorage.setItem('appliedPromoCode', promoCode);
+            
+            // Show success message
+            showToast(`✓ Offer "${promoCode}" applied! Redirecting to menu...`);
+            
+            // Redirect to menu page after 1.5 seconds
+            setTimeout(() => {
+                window.location.href = 'menu.html';
+            }, 1500);
+        }
+
+        // Order from specific restaurant
+        function orderFromRestaurant(restaurantId) {
+            // Show message
+            showToast('Redirecting to restaurant menu...');
+            
+            // Redirect to menu with restaurant filter
+            setTimeout(() => {
+                window.location.href = `menu?restaurantId=${restaurantId}`;
+            }, 1000);
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            // Remove existing toast if any
+            const existingToast = document.querySelector('.toast-notification');
+            if (existingToast) {
+                existingToast.remove();
+            }
+            
+            // Create new toast
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Check if there's an applied promo code on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const appliedCode = sessionStorage.getItem('appliedPromoCode');
+            if (appliedCode) {
+                // Highlight the applied code
+                const codeElement = document.getElementById(`code-${appliedCode}`);
+                if (codeElement) {
+                    codeElement.style.color = '#00D9A3';
+                    codeElement.style.fontWeight = 'bold';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
