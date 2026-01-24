@@ -2,8 +2,8 @@
 
 <div align="center">
 
-![FlavorNest Logo](<img width="1080" height="675" alt="veg_burger" src="https://github.com/user-attachments/assets/7682877a-8838-4def-bda5-33b016a39e50" />
-)
+<img width="1080" height="675" alt="veg_burger" src="https://github.com/user-attachments/assets/da0ab7a4-8a41-4daa-b384-4d8e65b8e27d" />
+
 
 **Your Favorite Food, Delivered Fast** 🚀
 
