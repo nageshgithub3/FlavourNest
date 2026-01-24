@@ -105,87 +105,90 @@ Key Tables:
 
 # 📁 Project Structure
 
-FlavorNest/
-│
-├── src/
-│   └── com/
-│       └── food/
-│           ├── Servlet/
-│           │   ├── HomeServlet.java
-│           │   ├── UserLoginServlet.java
-│           │   ├── UserRegisterServlet.java
-│           │   ├── MenuServlet.java
-│           │   ├── CartServlet.java
-│           │   └── CheckoutServlet.java
-│           │
-│           ├── dao/
-│           │   ├── UserDAO.java
-│           │   ├── RestaurantDAO.java
-│           │   ├── MenuDAO.java
-│           │   ├── OrderDAO.java
-│           │   └── OrderItemDAO.java
-│           │
-│           ├── daoimplementation/
-│           │   ├── UserDAOImpl.java
-│           │   ├── RestaurantDAOImpl.java
-│           │   ├── MenuDAOImpl.java
-│           │   ├── OrderDAOImpl.java
-│           │   └── OrderItemDAOImpl.java
-│           │
-│           ├── model/
-│           │   ├── User.java
-│           │   ├── Restaurant.java
-│           │   ├── Menu.java
-│           │   ├── Order.java
-│           │   ├── OrderItem.java
-│           │   ├── Cart.java
-│           │   └── CartItem.java
-│           │
-│           └── utility/
-│               └── DBConnection.java
-│
-├── WebContent/
-│   ├── WEB-INF/
-│   │   ├── web.xml
-│   │   └── lib/
-│   │       └── mysql-connector-java-x.x.xx.jar
-│   │
-│   ├── assets/
-│   │   └── images/
-│   │       └── menu/
-│   │           ├── flavour.png
-│   │           ├── veg_burger.jpg
-│   │           ├── cheese_pizza.jpg
-│   │           └── [other food images]
-│   │
-│   ├── home.html
-│   ├── login.html
-│   ├── register.html
-│   ├── menu.html
-│   ├── offers.html
-│   ├── Restaurant.jsp
-│   ├── Cart.jsp
-│   ├── checkout.jsp
-│   ├── orderConfirmation.html
-│   │
-│   ├── common.css
-│   ├── homeStyle.css
-│   ├── UloginStyle.css
-│   ├── URegisterStyle.css
-│   ├── menuStyle.css
-│   ├── Restaurant.css
-│   ├── cartStyle.css
-│   ├── checkoutStyle.css
-│   ├── offersStyle.css
-│   ├── orderConfirmationStyle.css
-│   │
-│   ├── script.js
-│   ├── menu.js
-│   └── Restaurant.js
-│
-├── database_schema.sql
-├── README.md
-└── .gitignore
+<div align = "center">
+ 
+   FlavorNest/
+   │
+   ├── src/
+   │   └── com/
+   │       └── food/
+   │           ├── Servlet/
+   │           │   ├── HomeServlet.java
+   │           │   ├── UserLoginServlet.java
+   │           │   ├── UserRegisterServlet.java
+   │           │   ├── MenuServlet.java
+   │           │   ├── CartServlet.java
+   │           │   └── CheckoutServlet.java
+   │           │
+   │           ├── dao/
+   │           │   ├── UserDAO.java
+   │           │   ├── RestaurantDAO.java
+   │           │   ├── MenuDAO.java
+   │           │   ├── OrderDAO.java
+   │           │   └── OrderItemDAO.java
+   │           │
+   │           ├── daoimplementation/
+   │           │   ├── UserDAOImpl.java
+   │           │   ├── RestaurantDAOImpl.java
+   │           │   ├── MenuDAOImpl.java
+   │           │   ├── OrderDAOImpl.java
+   │           │   └── OrderItemDAOImpl.java
+   │           │
+   │           ├── model/
+   │           │   ├── User.java
+   │           │   ├── Restaurant.java
+   │           │   ├── Menu.java
+   │           │   ├── Order.java
+   │           │   ├── OrderItem.java
+   │           │   ├── Cart.java
+   │           │   └── CartItem.java
+   │           │
+   │           └── utility/
+   │               └── DBConnection.java
+   │
+   ├── WebContent/
+   │   ├── WEB-INF/
+   │   │   ├── web.xml
+   │   │   └── lib/
+   │   │       └── mysql-connector-java-x.x.xx.jar
+   │   │
+   │   ├── assets/
+   │   │   └── images/
+   │   │       └── menu/
+   │   │           ├── flavour.png
+   │   │           ├── veg_burger.jpg
+   │   │           ├── cheese_pizza.jpg
+   │   │           └── [other food images]
+   │   │
+   │   ├── home.html
+   │   ├── login.html
+   │   ├── register.html
+   │   ├── menu.html
+   │   ├── offers.html
+   │   ├── Restaurant.jsp
+   │   ├── Cart.jsp
+   │   ├── checkout.jsp
+   │   ├── orderConfirmation.html
+   │   │
+   │   ├── common.css
+   │   ├── homeStyle.css
+   │   ├── UloginStyle.css
+   │   ├── URegisterStyle.css
+   │   ├── menuStyle.css
+   │   ├── Restaurant.css
+   │   ├── cartStyle.css
+   │   ├── checkoutStyle.css
+   │   ├── offersStyle.css
+   │   ├── orderConfirmationStyle.css
+   │   │
+   │   ├── script.js
+   │   ├── menu.js
+   │   └── Restaurant.js
+   │
+   ├── database_schema.sql
+   ├── README.md
+   └── .gitignore
+</div>
 
 
 ### 🔒 Security Features
