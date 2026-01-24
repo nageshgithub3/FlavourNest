@@ -107,87 +107,73 @@ Key Tables:
 
 <div align = "center">
  
-   FlavorNest/
-   │
-   ├── src/
-   │   └── com/
-   │       └── food/
-   │           ├── Servlet/
-   │           │   ├── HomeServlet.java
-   │           │   ├── UserLoginServlet.java
-   │           │   ├── UserRegisterServlet.java
-   │           │   ├── MenuServlet.java
-   │           │   ├── CartServlet.java
-   │           │   └── CheckoutServlet.java
-   │           │
-   │           ├── dao/
-   │           │   ├── UserDAO.java
-   │           │   ├── RestaurantDAO.java
-   │           │   ├── MenuDAO.java
-   │           │   ├── OrderDAO.java
-   │           │   └── OrderItemDAO.java
-   │           │
-   │           ├── daoimplementation/
-   │           │   ├── UserDAOImpl.java
-   │           │   ├── RestaurantDAOImpl.java
-   │           │   ├── MenuDAOImpl.java
-   │           │   ├── OrderDAOImpl.java
-   │           │   └── OrderItemDAOImpl.java
-   │           │
-   │           ├── model/
-   │           │   ├── User.java
-   │           │   ├── Restaurant.java
-   │           │   ├── Menu.java
-   │           │   ├── Order.java
-   │           │   ├── OrderItem.java
-   │           │   ├── Cart.java
-   │           │   └── CartItem.java
-   │           │
-   │           └── utility/
-   │               └── DBConnection.java
-   │
-   ├── WebContent/
-   │   ├── WEB-INF/
-   │   │   ├── web.xml
-   │   │   └── lib/
-   │   │       └── mysql-connector-java-x.x.xx.jar
-   │   │
-   │   ├── assets/
-   │   │   └── images/
-   │   │       └── menu/
-   │   │           ├── flavour.png
-   │   │           ├── veg_burger.jpg
-   │   │           ├── cheese_pizza.jpg
-   │   │           └── [other food images]
-   │   │
-   │   ├── home.html
-   │   ├── login.html
-   │   ├── register.html
-   │   ├── menu.html
-   │   ├── offers.html
-   │   ├── Restaurant.jsp
-   │   ├── Cart.jsp
-   │   ├── checkout.jsp
-   │   ├── orderConfirmation.html
-   │   │
-   │   ├── common.css
-   │   ├── homeStyle.css
-   │   ├── UloginStyle.css
-   │   ├── URegisterStyle.css
-   │   ├── menuStyle.css
-   │   ├── Restaurant.css
-   │   ├── cartStyle.css
-   │   ├── checkoutStyle.css
-   │   ├── offersStyle.css
-   │   ├── orderConfirmationStyle.css
-   │   │
-   │   ├── script.js
-   │   ├── menu.js
-   │   └── Restaurant.js
-   │
-   ├── database_schema.sql
-   ├── README.md
-   └── .gitignore
+  FlavorNest/
+├── src/
+│ └── com/
+│ └── food/
+│ ├── servlet/
+│ │ ├── HomeServlet.java
+│ │ ├── UserLoginServlet.java
+│ │ ├── UserRegisterServlet.java
+│ │ ├── MenuServlet.java
+│ │ ├── CartServlet.java
+│ │ └── CheckoutServlet.java
+│ │
+│ ├── dao/
+│ │ ├── UserDAO.java
+│ │ ├── RestaurantDAO.java
+│ │ ├── MenuDAO.java
+│ │ ├── OrderDAO.java
+│ │ └── OrderItemDAO.java
+│ │
+│ ├── daoimplementation/
+│ │ ├── UserDAOImpl.java
+│ │ ├── RestaurantDAOImpl.java
+│ │ ├── MenuDAOImpl.java
+│ │ ├── OrderDAOImpl.java
+│ │ └── OrderItemDAOImpl.java
+│ │
+│ ├── model/
+│ │ ├── User.java
+│ │ ├── Restaurant.java
+│ │ ├── Menu.java
+│ │ ├── Order.java
+│ │ ├── OrderItem.java
+│ │ ├── Cart.java
+│ │ └── CartItem.java
+│ │
+│ └── utility/
+│ └── DBConnection.java
+│
+├── WebContent/
+│ ├── WEB-INF/
+│ │ ├── web.xml
+│ │ └── lib/
+│ │ └── mysql-connector-java-x.x.xx.jar
+│ │
+│ ├── assets/
+│ │ └── images/
+│ │ └── menu/
+│ │ ├── flavour.png
+│ │ ├── veg_burger.jpg
+│ │ └── cheese_pizza.jpg
+│ │
+│ ├── home.html
+│ ├── login.html
+│ ├── register.html
+│ ├── menu.html
+│ ├── offers.html
+│ ├── Restaurant.jsp
+│ ├── Cart.jsp
+│ ├── checkout.jsp
+│ ├── orderConfirmation.html
+│ │
+│ ├── css/
+│ └── js/
+│
+├── database_schema.sql
+├── README.md
+└── .gitignore
 </div>
 
 
@@ -261,6 +247,23 @@ in the Software without restriction...
 If you found this project helpful, please star ⭐ the repository.
 
 Made with ❤️ using Java
+
+## Food Delivery Application ScreenShots
+
+<img width="1907" height="969" alt="Screenshot 2026-01-24 194052" src="https://github.com/user-attachments/assets/78447048-bbc1-42a2-89a7-149514ed012f" />
+
+
+<img width="1885" height="975" alt="Screenshot 2026-01-24 194111" src="https://github.com/user-attachments/assets/6a1981b6-9790-4f91-bc2d-cc1a5f930d40" />
+
+
+<img width="1897" height="966" alt="Screenshot 2026-01-24 194141" src="https://github.com/user-attachments/assets/1fb049c3-79ca-456f-a48e-974cefe17635" />
+
+
+<img width="1887" height="969" alt="Screenshot 2026-01-24 194208" src="https://github.com/user-attachments/assets/9fa47b73-77c6-41f3-8e5b-8b1ac6c22727" />
+
+
+
+
 
 
 ---
