@@ -102,9 +102,9 @@ Key Tables:
 4. Apply promo codes
 5. Checkout & place order
 6. View order confirmation
-
-## 📁 Project Structure
 ---
+## 📁 Project Structure
+```text
 FlavorNest/
 │
 ├── src/
@@ -173,6 +173,7 @@ FlavorNest/
 ├── database_schema.sql
 ├── README.md
 └── .gitignore
+```
 ---
 
 ### 🔒 Security Features
