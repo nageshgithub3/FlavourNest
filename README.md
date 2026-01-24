@@ -103,11 +103,10 @@ Key Tables:
 5. Checkout & place order
 6. View order confirmation
 
-# 📁 Project Structure
+## 📁 Project Structure
 
-<div align = "center">
- 
-  FlavorNest/
+FlavorNest/
+│
 ├── src/
 │ └── com/
 │ └── food/
@@ -174,7 +173,6 @@ Key Tables:
 ├── database_schema.sql
 ├── README.md
 └── .gitignore
-</div>
 
 
 ### 🔒 Security Features
