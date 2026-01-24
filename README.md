@@ -104,7 +104,7 @@ Key Tables:
 6. View order confirmation
 
 ## 📁 Project Structure
-
+---
 FlavorNest/
 │
 ├── src/
@@ -173,7 +173,7 @@ FlavorNest/
 ├── database_schema.sql
 ├── README.md
 └── .gitignore
-
+---
 
 ### 🔒 Security Features
 
